@@ -16,17 +16,17 @@ A discord user (of the r/FLutterDev channel) asked to have a record button made 
 
 This is the sample gif I have been given:
 
-<img src="readme_assets/original_tiktokt_button.gif" alt="drawing" width="200"/ >
+<img src="https://github.com/mariopepe/medium_articles/blob/master/tiktok_record_button/readme_assets/original_tiktokt_button.gif?raw=true" alt="drawing" width="200"/ >
 
 This is my version:
 
-<img src="readme_assets/my_version.gif" alt="drawing" width="200"/ >
+<img src="https://github.com/mariopepe/medium_articles/blob/master/tiktok_record_button/readme_assets/my_version.gif?raw=true" alt="my version" width="200"/ >
 
 ## Easily editable
 
 Go to the `lib/common/constants.dart` file to edit every aspect of the animations and the drawings.
 
-<img src="readme_asstets/constants.png" alt="drawing" width="600"/ >
+<img src="readme_assets/constants.png" alt="drawing" width="600"/ >
 
 If you are looking for even more advanced editing capabilities go to `lib/recording_button/custom_paint` to edit the proportion of the drawing.
 
