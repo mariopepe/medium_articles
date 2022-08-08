@@ -12,15 +12,15 @@
 
 A discord user (of the r/FLutterDev channel) asked to have a record button made in FLutter similar to the TIkTok one.
 
-<img src="readme_asstets/discord_request.png" alt="discord request" width="300"/>
+<img src="readme_assets/discord_request.png" alt="discord request" width="300"/>
 
 This is the sample gif I have been given:
 
-<img src="readme_asstets/original_tiktokt_button.gif" alt="drawing" width="200"/ >
+<img src="readme_assets/original_tiktokt_button.gif" alt="drawing" width="200"/ >
 
 This is my version:
 
-<img src="readme_asstets/my_version.gif" alt="drawing" width="200"/ >
+<img src="readme_assets/my_version.gif" alt="drawing" width="200"/ >
 
 ## Easily editable
 
