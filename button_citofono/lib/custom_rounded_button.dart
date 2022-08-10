@@ -20,19 +20,29 @@ class _CustomRoundedButtonState extends State<CustomRoundedButton> {
   final Duration animationDuration = const Duration(milliseconds: 180);
 
   double scale = 1.0;
+  double opacity = 0.0;
 
   void onTapDown() {
-    setState(() => scale = scaleAfterAnimation);
+    setState(() {
+      scale = scaleAfterAnimation;
+      opacity = 1;
+    });
   }
 
   void onTapUp() {
     Future.delayed(animationDuration - const Duration(milliseconds: 60), () {
-      setState(() => scale = 1);
+      setState(() {
+        scale = 1;
+        opacity = 0;
+      });
     });
   }
 
   void onTapCancel() {
-    setState(() => scale = 1);
+    setState(() {
+      scale = 1;
+      opacity = 0;
+    });
   }
 
   @override
@@ -63,37 +73,78 @@ class _CustomRoundedButtonState extends State<CustomRoundedButton> {
                 onTapUp();
                 widget.onPressed();
               },
-              child: AnimatedScale(
-                duration: animationDuration,
-                scale: scale,
-                curve: Curves.easeInOut,
-                child: Container(
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        blurRadius: 6,
-                        spreadRadius: 6,
-                      ),
-                    ],
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(
-                        constraints.maxWidth / 3.2,
-                      ),
-                    ),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.all(constraints.maxWidth * 0.24),
-                    child: const FittedBox(
-                      fit: BoxFit.fill,
-                      child: Icon(
-                        Icons.power_settings_new_rounded,
-                        color: Colors.black38,
+              child: Stack(
+                children: [
+                  Positioned.fill(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.2),
+                            blurRadius: 6,
+                            spreadRadius: 6,
+                          ),
+                        ],
+                        color: Colors.transparent,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(
+                            constraints.maxWidth / 3.2,
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
+                  Positioned.fill(
+                    child: AnimatedOpacity(
+                      duration: animationDuration,
+                      opacity: opacity,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              blurRadius: 6,
+                              spreadRadius: 0,
+                            ),
+                          ],
+                          color: Colors.transparent,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              constraints.maxWidth / 3.2,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned.fill(
+                    child: AnimatedScale(
+                      duration: animationDuration,
+                      scale: scale,
+                      curve: Curves.easeInOut,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              constraints.maxWidth / 3.2,
+                            ),
+                          ),
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.all(constraints.maxWidth * 0.24),
+                          child: const FittedBox(
+                            fit: BoxFit.fill,
+                            child: Icon(
+                              Icons.power_settings_new_rounded,
+                              color: Colors.black38,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
