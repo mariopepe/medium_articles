@@ -17,7 +17,7 @@ This is the sample image I have been given:
 
 This is my version:
 
-<img src="" alt="my version" width="200"/>
+<img src="https://github.com/mariopepe/medium_articles/blob/master/button_citofono/readme_assets/result.gif?raw=true" alt="my version" width="300"/>
 
 ## Need me to fix something?
 
