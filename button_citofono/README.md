@@ -6,6 +6,8 @@
 
 🐦 Follow me on Twitter for more FLutter tips and tutorials! [CodingMario](https://twitter.com/mariopepe_)
 
+🙏🏻 **Thanks to the great [HatDroid](https://twitter.com/hat_droid) for the improvement suggestions!!!!!**
+
 
 ## The reason
 
