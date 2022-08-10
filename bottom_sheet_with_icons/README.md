@@ -16,7 +16,7 @@ A discord user (of the r/FLutterDev channel) asked to have "draggablescrollables
 
 This is my version:
 
-<img src="" alt="my version" width="200"/>
+<img src="https://raw.githubusercontent.com/mariopepe/medium_articles/master/bottom_sheet_with_icons/readme_assets/gif_result.gif" alt="my version" width="300"/>
 
 ## Need me to fix something?
 
